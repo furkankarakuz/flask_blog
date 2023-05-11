@@ -1,0 +1,18 @@
+{% extends 'includes/layout.html' %}
+{% from 'includes/formhelpers.html' import render_field %}
+{% block content %}
+<h1 class="text-center">Add Articles</h1>
+    <hr>
+    <div class="h-100 w-50 mx-5">
+        <form class="m-10" method = "post" enctype='multipart/form-data'>
+            {{ form.csrf_token }}
+            Title{{ render_field(form.title,class="form-control mb-3") }}
+            Content {{ render_field(form.content,class="form-control mb-3") }}
+            Tag{{ render_field(form.tag,class="form-control mb-3") }}
+            {{ render_field(form.image_file,class="form-control mb-3") }}
+            <button type="submit" class="btn btn-success mt-5">Add Article</button>
+        </form>
+        {{ ckeditor.load() }}
+        {{ ckeditor.config(name='content') }}
+    </div>
+{% endblock  %}

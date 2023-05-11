@@ -1,0 +1,11 @@
+{% extends 'includes/layout.html' %}
+{% from 'includes/formhelpers.html' import render_field %}
+{% include 'includes/modals.html' %}
+{% block content %}
+    <main class="px-3 text-center">
+        <h1>{{text}}</h1>
+        <p class="lead">This website is page for share simple and beautiful blogs</p>
+        <p class="lead"><a href="/articles" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a></p>
+    </main>
+    <footer class="mt-auto text-white-50"></footer>
+{% endblock  content %}

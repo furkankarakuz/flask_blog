@@ -1,0 +1,54 @@
+<div class="modal fade text-bg-dark" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-bg-light">
+            <div class="modal-header">
+                <h1 class="fw-bold mb-0 fs-2 text-center">Login</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post">
+                    <div class="form-floating">
+                        {{render_field(login_form.username,class="form-control rounded-3",id="floatingInput",placeholder="Username")}}
+                    </div>
+                    <div class="form-floating">
+                        {{render_field(login_form.password,class="form-control rounded-3",id="floatingPassword",placeholder="Password")}}
+                    </div>
+                    <button class="w-100 mb-2 mt-5 btn btn-lg rounded-3 btn-danger" type="submit">Sign up</button>
+                </form>
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade text-bg-dark" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-bg-light">
+            <div class="modal-header">
+                <h1 class="fw-bold mb-0 fs-2 text-center">Register</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post">
+                    
+                    <div class="form-floating">
+                        {{render_field(register_form.name,class="form-control rounded-3",id="floatingInput",placeholder="Name")}}
+                    </div>
+                    <div class="form-floating">
+                        {{render_field(register_form.surname,class="form-control rounded-3",id="floatingInput",placeholder="Surname")}}
+                    </div>
+                    <div class="form-floating">
+                        {{render_field(register_form.username,class="form-control rounded-3",id="floatingInput",placeholder="Username")}}
+                    </div>
+                    <div class="form-floating">
+                        {{render_field(register_form.email,class="form-control rounded-3",id="floatingInput",placeholder="Email")}}
+                    </div>
+                    <div class="form-floating">
+                        {{render_field(register_form.password,class="form-control rounded-3",id="floatingInput",placeholder="Password")}}
+                    </div>
+                    <button class="w-100 mb-2 mt-5 btn btn-lg rounded-3 btn-danger" type="submit">Sign up</button>
+                </form>
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>

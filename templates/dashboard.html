@@ -1,0 +1,31 @@
+{% extends 'includes/layout.html' %}
+{% block content %}
+<h1 class="text-center">Dashboard</h1>
+    <hr>
+    <a class="btn btn-success mx-5" href="/addarticle">Add Article</a>
+    <section class="py-5">
+        <div class="container px-5">
+            <div class="row gx-5">
+                {% for my_article in my_articles %}
+                    <div class="col-lg-4 mb-5">
+                        <div class="card h-100 shadow border-0">
+                            <img class="card-img-top w-100 h-50" src="{{my_article.image_file}}" alt="..." />
+                            <div class="card-body p-4">
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">{{my_article.tag}}</div>
+                                <br>
+                                <a class="link-dark text-decoration-none h5 card-title mb-3" href="/detail{{my_article.id_article}}">{{my_article.title}}</a>
+                                <p class="card-text mb-0">{{my_article.content|truncate(50)|safe}}</p>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                <div class="d-flex align-items-end justify-content-between">
+                                    <a class="btn btn-warning float-start" href="/update{{my_article.id_article}}">Update</a>
+                                    <a class="btn btn-danger float-end" href="/delete{{my_article.id_article}}">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock  %}

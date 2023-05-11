@@ -1,0 +1,28 @@
+{% extends 'includes/layout.html' %}
+{% from 'includes/formhelpers.html' import render_field %}
+
+{% block content %}
+    <section class="w-75 h-75" style="margin:auto">
+        <div class="container px-5">
+            <div class="row gx-5">
+                    <div class="col-lg-12 mb-5">
+                        <div class="card h-100 shadow border-0 bg-light">
+                            <img class="card-img-top h-25" src="{{my_article.image_file}}" alt="..." />
+                            <div class="card-body p-4">
+                                <div class="row">
+                                    <div style="column">
+                                        <h6 style="float:left">Author : {{my_article.user}}</h6>
+                                        <h6 style="float:right">Created Date : {{my_article.created_date}}</h6>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">{{my_article.tag}}</div>
+                                <a class="text-decoration-none link-dark stretched-link" href="/detail{{my_article.id_article}}"><div class="h5 card-title mb-3">{{my_article.title}}</div></a>
+                                <p class="card-text mb-0">{{my_article.content|safe}}</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+{% endblock  %}

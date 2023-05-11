@@ -1,0 +1,17 @@
+<header class="mb-auto">
+    <div>
+        <a href="/"><h2 class="float-md-start mb-0 text-bg-dark">Blog</h2></a>
+        <nav class="nav nav-masthead justify-content-center mx-5 float-md-start">
+            <a class="nav-link fw-bold py-1 px-0" href="/articles">Articles</a>
+        </nav>
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+            {% if session["check_login"] %}
+                <a class="nav-link fw-bold py-1 px-0" href="/dashboard">Dashboard</a>
+                <a class="nav-link fw-bold py-1 px-0" href="/logout">Logout</a>
+            {% else %}
+                <a class="nav-link fw-bold py-1 px-0" data-bs-toggle="modal" data-bs-target="#exampleModal1">Login</a>
+                <a class="nav-link fw-bold py-1 px-0" data-bs-toggle="modal" data-bs-target="#exampleModal2">Register</a>
+            {% endif %}
+        </nav>
+    </div>
+</header>
